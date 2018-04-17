@@ -1,5 +1,5 @@
 {
-  "name": "tinylogger",
+  "name": "logmanager",
   "version": "0.0.1-beta",
   "description": "console logs, manage logs using mongodb, send you email when an error occurs ",
   "main": "index.js",
