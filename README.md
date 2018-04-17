@@ -1,5 +1,6 @@
 > Tinylogger overwrites console to provide a better output. At the same time, it insert your logs in mongodb for a easy management of logs. It also can keep you informed if an error happens in your project.
 
+** This is a beta version and be careful when using it **
 
 Your console would be like this :
 ```bash
@@ -49,11 +50,15 @@ in your mongodb you will geth log like these:
 }
 ```
 
-# install
+# Install
 ```bash
 npm install tinylogger --save
 ```
-# usage
+if you use mongodb to log, you need to install it
+```bash
+sudo apt install mongodb
+```
+# Usage
 You can write a seperated file like this:
 ```javascript
 var logger = require("tinylogger")
