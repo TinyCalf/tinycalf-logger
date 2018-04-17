@@ -58,7 +58,7 @@ var _console = (date ,type , msg) => {
 var _dbInsert = (date, location, type, msg) => {
   if(msg instanceof Error) {
     db.append(location, type, msg.message + '\n' + msg.stack, date).then().catch()
-  } else if(type=="SUCCESS") {
+  } else {
     db.append(location, type, msg, date).then().catch()
   }
 }
