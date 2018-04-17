@@ -1,6 +1,6 @@
 {
-  "name": "logmanager",
-  "version": "0.0.1-beta",
+  "name": "tinycalf-logger",
+  "version": "0.0.2-beta",
   "description": "console logs, manage logs using mongodb, send you email when an error occurs ",
   "main": "index.js",
   "scripts": {

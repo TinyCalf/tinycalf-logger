@@ -52,7 +52,7 @@ in your mongodb you will geth log like these:
 
 # Install
 ```bash
-npm install tinylogger --save
+npm install tinycalf-logger --save
 ```
 if you use mongodb to log, you need to install it
 ```bash
