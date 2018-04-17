@@ -34,7 +34,6 @@ function sendEmailStep(subject, text) {
     text: text,
     //html: '<b>Hello world?</b>' // html body
   }
-  console.log(smtpConfig,mailContent)
   let transporter = nodemailer.createTransport(smtpConfig)
 
   transporter.sendMail(mailContent, (error, info) => {
