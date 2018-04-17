@@ -7,13 +7,13 @@ var smtpConfig = {
   // port: 465,
   // secure: true,
   // auth: {
-  //   user: 'zhujiasheng@h5edu.cn',
-  //   pass: 'Zjs1993'
+  //   user: '123456789@qq.com',
+  //   pass: 'password'
   // }
 }
 
 var mailConfig = {
-  // from: '"Bitgogogo by TinyCalf" <zhujiasheng@h5edu.cn>'
+  // from: ''
   // to: []
 }
 
