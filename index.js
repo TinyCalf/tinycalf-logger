@@ -1,6 +1,7 @@
 const chalk = require('chalk');
 var callstack = require('callstack');
 var db = require('./db')
+var email = require('./email')
 
 
 var _config = {
@@ -68,6 +69,12 @@ var _print = (type, msg) => {
   _console(date ,type , msg)
   if(_config.mongodb)
     _dbInsert(new Date(), callstack()[2] ,type , msg)
+  if(_config.email && type=="ERROR"){
+    if(msg instanceof Error)
+      email.send("You've got a new error", msg.stack)
+    else
+      email.send("You've got a new error", msg)
+  }
 }
 
   /*
@@ -85,6 +92,7 @@ var _print = (type, msg) => {
           pass: 'Zjs1993'
         }
       },
+      from: "My project"
       receivers:[]
     } || null,
 }
@@ -98,6 +106,13 @@ exports.init = (config) =>{
   _config = config
   if(_config.mongodb) {
     db.connect(_config.mongodb)
+  }
+  if(_config.email) {
+    email.init(
+      _config.email.smtp,
+      _config.email.from,
+      _config.email.receivers,
+    )
   }
 }
 

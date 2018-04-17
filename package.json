@@ -11,6 +11,8 @@
   "dependencies": {
     "callstack": "^1.0.1",
     "chalk": "^2.4.0",
-    "mongoose": "^5.0.15"
+    "mongoose": "^5.0.15",
+    "nodemailer": "^4.6.4",
+    "string": "^3.3.3"
   }
 }
