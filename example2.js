@@ -1,0 +1,6 @@
+console.log("normal console")
+console.info("something happening")
+console.warn("you can do better here")
+console.error("something bad happened")
+console.error(new Error("something bad happened"))
+console.success("something has been done successfully")
